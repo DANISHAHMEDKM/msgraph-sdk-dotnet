@@ -1744,7 +1744,7 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("skills", value); }
         }
 #endif
-        /// <summary>The solutions property</summary>
+        /// <summary>The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Microsoft.Graph.Models.UserSolutionRoot? Solutions
