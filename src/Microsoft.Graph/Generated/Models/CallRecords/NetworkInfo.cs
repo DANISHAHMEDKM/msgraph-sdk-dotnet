@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models.CallRecords
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class NetworkInfo : IAdditionalDataHolder, IBackedModel, IParsable
     #pragma warning restore CS1591
@@ -22,11 +22,21 @@ namespace Microsoft.Graph.Models.CallRecords
         /// <summary>Stores model information.</summary>
         public IBackingStore BackingStore { get; private set; }
         /// <summary>Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.</summary>
-        public float? BandwidthLowEventRatio
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio? BandwidthLowEventRatio
         {
-            get { return BackingStore?.Get<float?>("bandwidthLowEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio?>("bandwidthLowEventRatio"); }
             set { BackingStore?.Set("bandwidthLowEventRatio", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio BandwidthLowEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio>("bandwidthLowEventRatio"); }
+            set { BackingStore?.Set("bandwidthLowEventRatio", value); }
+        }
+#endif
         /// <summary>The wireless LAN basic service set identifier of the media endpoint used to connect to the network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,11 +60,21 @@ namespace Microsoft.Graph.Models.CallRecords
             set { BackingStore?.Set("connectionType", value); }
         }
         /// <summary>Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.</summary>
-        public float? DelayEventRatio
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio? DelayEventRatio
         {
-            get { return BackingStore?.Get<float?>("delayEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio?>("delayEventRatio"); }
             set { BackingStore?.Set("delayEventRatio", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio DelayEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio>("delayEventRatio"); }
+            set { BackingStore?.Set("delayEventRatio", value); }
+        }
+#endif
         /// <summary>DNS suffix associated with the network adapter of the media endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,11 +158,21 @@ namespace Microsoft.Graph.Models.CallRecords
             set { BackingStore?.Set("port", value); }
         }
         /// <summary>Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.</summary>
-        public float? ReceivedQualityEventRatio
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio? ReceivedQualityEventRatio
         {
-            get { return BackingStore?.Get<float?>("receivedQualityEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio?>("receivedQualityEventRatio"); }
             set { BackingStore?.Set("receivedQualityEventRatio", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio ReceivedQualityEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio>("receivedQualityEventRatio"); }
+            set { BackingStore?.Set("receivedQualityEventRatio", value); }
+        }
+#endif
         /// <summary>IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -182,11 +212,21 @@ namespace Microsoft.Graph.Models.CallRecords
             set { BackingStore?.Set("relayPort", value); }
         }
         /// <summary>Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.</summary>
-        public float? SentQualityEventRatio
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio? SentQualityEventRatio
         {
-            get { return BackingStore?.Get<float?>("sentQualityEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio?>("sentQualityEventRatio"); }
             set { BackingStore?.Set("sentQualityEventRatio", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio SentQualityEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio>("sentQualityEventRatio"); }
+            set { BackingStore?.Set("sentQualityEventRatio", value); }
+        }
+#endif
         /// <summary>Subnet used for media stream by the media endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -339,10 +379,10 @@ namespace Microsoft.Graph.Models.CallRecords
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bandwidthLowEventRatio", n => { BandwidthLowEventRatio = n.GetFloatValue(); } },
+                { "bandwidthLowEventRatio", n => { BandwidthLowEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio>(global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio.CreateFromDiscriminatorValue); } },
                 { "basicServiceSetIdentifier", n => { BasicServiceSetIdentifier = n.GetStringValue(); } },
                 { "connectionType", n => { ConnectionType = n.GetEnumValue<global::Microsoft.Graph.Models.CallRecords.NetworkConnectionType>(); } },
-                { "delayEventRatio", n => { DelayEventRatio = n.GetFloatValue(); } },
+                { "delayEventRatio", n => { DelayEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio>(global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio.CreateFromDiscriminatorValue); } },
                 { "dnsSuffix", n => { DnsSuffix = n.GetStringValue(); } },
                 { "ipAddress", n => { IpAddress = n.GetStringValue(); } },
                 { "linkSpeed", n => { LinkSpeed = n.GetLongValue(); } },
@@ -350,11 +390,11 @@ namespace Microsoft.Graph.Models.CallRecords
                 { "networkTransportProtocol", n => { NetworkTransportProtocol = n.GetEnumValue<global::Microsoft.Graph.Models.CallRecords.NetworkTransportProtocol>(); } },
                 { "@odata.type", n => { OdataType = n.GetStringValue(); } },
                 { "port", n => { Port = n.GetIntValue(); } },
-                { "receivedQualityEventRatio", n => { ReceivedQualityEventRatio = n.GetFloatValue(); } },
+                { "receivedQualityEventRatio", n => { ReceivedQualityEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio>(global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio.CreateFromDiscriminatorValue); } },
                 { "reflexiveIPAddress", n => { ReflexiveIPAddress = n.GetStringValue(); } },
                 { "relayIPAddress", n => { RelayIPAddress = n.GetStringValue(); } },
                 { "relayPort", n => { RelayPort = n.GetIntValue(); } },
-                { "sentQualityEventRatio", n => { SentQualityEventRatio = n.GetFloatValue(); } },
+                { "sentQualityEventRatio", n => { SentQualityEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio>(global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio.CreateFromDiscriminatorValue); } },
                 { "subnet", n => { Subnet = n.GetStringValue(); } },
                 { "traceRouteHops", n => { TraceRouteHops = n.GetCollectionOfObjectValues<global::Microsoft.Graph.Models.CallRecords.TraceRouteHop>(global::Microsoft.Graph.Models.CallRecords.TraceRouteHop.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "wifiBand", n => { WifiBand = n.GetEnumValue<global::Microsoft.Graph.Models.CallRecords.WifiBand>(); } },
@@ -375,10 +415,10 @@ namespace Microsoft.Graph.Models.CallRecords
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteFloatValue("bandwidthLowEventRatio", BandwidthLowEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio>("bandwidthLowEventRatio", BandwidthLowEventRatio);
             writer.WriteStringValue("basicServiceSetIdentifier", BasicServiceSetIdentifier);
             writer.WriteEnumValue<global::Microsoft.Graph.Models.CallRecords.NetworkConnectionType>("connectionType", ConnectionType);
-            writer.WriteFloatValue("delayEventRatio", DelayEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio>("delayEventRatio", DelayEventRatio);
             writer.WriteStringValue("dnsSuffix", DnsSuffix);
             writer.WriteStringValue("ipAddress", IpAddress);
             writer.WriteLongValue("linkSpeed", LinkSpeed);
@@ -386,11 +426,11 @@ namespace Microsoft.Graph.Models.CallRecords
             writer.WriteEnumValue<global::Microsoft.Graph.Models.CallRecords.NetworkTransportProtocol>("networkTransportProtocol", NetworkTransportProtocol);
             writer.WriteStringValue("@odata.type", OdataType);
             writer.WriteIntValue("port", Port);
-            writer.WriteFloatValue("receivedQualityEventRatio", ReceivedQualityEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio>("receivedQualityEventRatio", ReceivedQualityEventRatio);
             writer.WriteStringValue("reflexiveIPAddress", ReflexiveIPAddress);
             writer.WriteStringValue("relayIPAddress", RelayIPAddress);
             writer.WriteIntValue("relayPort", RelayPort);
-            writer.WriteFloatValue("sentQualityEventRatio", SentQualityEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio>("sentQualityEventRatio", SentQualityEventRatio);
             writer.WriteStringValue("subnet", Subnet);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Graph.Models.CallRecords.TraceRouteHop>("traceRouteHops", TraceRouteHops);
             writer.WriteEnumValue<global::Microsoft.Graph.Models.CallRecords.WifiBand>("wifiBand", WifiBand);
@@ -403,6 +443,390 @@ namespace Microsoft.Graph.Models.CallRecords
             writer.WriteStringValue("wifiVendorDriver", WifiVendorDriver);
             writer.WriteStringValue("wifiVendorDriverVersion", WifiVendorDriverVersion);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class NetworkInfo_bandwidthLowEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio"/> and sets the default values.
+            /// </summary>
+            public NetworkInfo_bandwidthLowEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_bandwidthLowEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class NetworkInfo_delayEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio"/> and sets the default values.
+            /// </summary>
+            public NetworkInfo_delayEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_delayEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class NetworkInfo_receivedQualityEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio"/> and sets the default values.
+            /// </summary>
+            public NetworkInfo_receivedQualityEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_receivedQualityEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class NetworkInfo_sentQualityEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio"/> and sets the default values.
+            /// </summary>
+            public NetworkInfo_sentQualityEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.NetworkInfo.NetworkInfo_sentQualityEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

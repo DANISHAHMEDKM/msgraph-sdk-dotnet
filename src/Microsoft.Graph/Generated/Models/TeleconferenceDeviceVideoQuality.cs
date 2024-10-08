@@ -7,35 +7,75 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class TeleconferenceDeviceVideoQuality : global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The average inbound stream video bit rate per second.</summary>
-        public double? AverageInboundBitRate
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate? AverageInboundBitRate
         {
-            get { return BackingStore?.Get<double?>("averageInboundBitRate"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate?>("averageInboundBitRate"); }
             set { BackingStore?.Set("averageInboundBitRate", value); }
         }
-        /// <summary>The average inbound stream video frame rate per second.</summary>
-        public double? AverageInboundFrameRate
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate AverageInboundBitRate
         {
-            get { return BackingStore?.Get<double?>("averageInboundFrameRate"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate>("averageInboundBitRate"); }
+            set { BackingStore?.Set("averageInboundBitRate", value); }
+        }
+#endif
+        /// <summary>The average inbound stream video frame rate per second.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate? AverageInboundFrameRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate?>("averageInboundFrameRate"); }
             set { BackingStore?.Set("averageInboundFrameRate", value); }
         }
-        /// <summary>The average outbound stream video bit rate per second.</summary>
-        public double? AverageOutboundBitRate
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate AverageInboundFrameRate
         {
-            get { return BackingStore?.Get<double?>("averageOutboundBitRate"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate>("averageInboundFrameRate"); }
+            set { BackingStore?.Set("averageInboundFrameRate", value); }
+        }
+#endif
+        /// <summary>The average outbound stream video bit rate per second.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate? AverageOutboundBitRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate?>("averageOutboundBitRate"); }
             set { BackingStore?.Set("averageOutboundBitRate", value); }
         }
-        /// <summary>The average outbound stream video frame rate per second.</summary>
-        public double? AverageOutboundFrameRate
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate AverageOutboundBitRate
         {
-            get { return BackingStore?.Get<double?>("averageOutboundFrameRate"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate>("averageOutboundBitRate"); }
+            set { BackingStore?.Set("averageOutboundBitRate", value); }
+        }
+#endif
+        /// <summary>The average outbound stream video frame rate per second.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate? AverageOutboundFrameRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate?>("averageOutboundFrameRate"); }
             set { BackingStore?.Set("averageOutboundFrameRate", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate AverageOutboundFrameRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate>("averageOutboundFrameRate"); }
+            set { BackingStore?.Set("averageOutboundFrameRate", value); }
+        }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality"/> and sets the default values.
         /// </summary>
@@ -66,10 +106,10 @@ namespace Microsoft.Graph.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "averageInboundBitRate", n => { AverageInboundBitRate = n.GetDoubleValue(); } },
-                { "averageInboundFrameRate", n => { AverageInboundFrameRate = n.GetDoubleValue(); } },
-                { "averageOutboundBitRate", n => { AverageOutboundBitRate = n.GetDoubleValue(); } },
-                { "averageOutboundFrameRate", n => { AverageOutboundFrameRate = n.GetDoubleValue(); } },
+                { "averageInboundBitRate", n => { AverageInboundBitRate = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate>(global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate.CreateFromDiscriminatorValue); } },
+                { "averageInboundFrameRate", n => { AverageInboundFrameRate = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate>(global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate.CreateFromDiscriminatorValue); } },
+                { "averageOutboundBitRate", n => { AverageOutboundBitRate = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate>(global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate.CreateFromDiscriminatorValue); } },
+                { "averageOutboundFrameRate", n => { AverageOutboundFrameRate = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate>(global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -80,10 +120,394 @@ namespace Microsoft.Graph.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteDoubleValue("averageInboundBitRate", AverageInboundBitRate);
-            writer.WriteDoubleValue("averageInboundFrameRate", AverageInboundFrameRate);
-            writer.WriteDoubleValue("averageOutboundBitRate", AverageOutboundBitRate);
-            writer.WriteDoubleValue("averageOutboundFrameRate", AverageOutboundFrameRate);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate>("averageInboundBitRate", AverageInboundBitRate);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate>("averageInboundFrameRate", AverageInboundFrameRate);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate>("averageOutboundBitRate", AverageOutboundBitRate);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate>("averageOutboundFrameRate", AverageOutboundFrameRate);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceVideoQuality_averageInboundBitRate : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceVideoQuality_averageInboundBitRate()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundBitRate();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceVideoQuality_averageInboundFrameRate : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceVideoQuality_averageInboundFrameRate()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageInboundFrameRate();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceVideoQuality_averageOutboundBitRate : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceVideoQuality_averageOutboundBitRate()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundBitRate();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceVideoQuality_averageOutboundFrameRate : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceVideoQuality_averageOutboundFrameRate()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceVideoQuality.TeleconferenceDeviceVideoQuality_averageOutboundFrameRate();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

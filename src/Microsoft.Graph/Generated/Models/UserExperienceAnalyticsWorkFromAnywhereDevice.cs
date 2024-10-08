@@ -10,7 +10,7 @@ namespace Microsoft.Graph.Models
     /// <summary>
     /// The user experience analytics device for work from anywhere report.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     public partial class UserExperienceAnalyticsWorkFromAnywhereDevice : global::Microsoft.Graph.Models.Entity, IParsable
     {
         /// <summary>When TRUE, indicates the intune device&apos;s autopilot profile is assigned. When FALSE, indicates it&apos;s not Assigned. Supports: $select, $OrderBy. Read-only.</summary>
@@ -64,23 +64,53 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("azureAdRegistered", value); }
         }
         /// <summary>Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? CloudIdentityScore
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore? CloudIdentityScore
         {
-            get { return BackingStore?.Get<double?>("cloudIdentityScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore?>("cloudIdentityScore"); }
             set { BackingStore?.Set("cloudIdentityScore", value); }
         }
-        /// <summary>Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? CloudManagementScore
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore CloudIdentityScore
         {
-            get { return BackingStore?.Get<double?>("cloudManagementScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore>("cloudIdentityScore"); }
+            set { BackingStore?.Set("cloudIdentityScore", value); }
+        }
+#endif
+        /// <summary>Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore? CloudManagementScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore?>("cloudManagementScore"); }
             set { BackingStore?.Set("cloudManagementScore", value); }
         }
-        /// <summary>Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? CloudProvisioningScore
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore CloudManagementScore
         {
-            get { return BackingStore?.Get<double?>("cloudProvisioningScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore>("cloudManagementScore"); }
+            set { BackingStore?.Set("cloudManagementScore", value); }
+        }
+#endif
+        /// <summary>Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore? CloudProvisioningScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore?>("cloudProvisioningScore"); }
             set { BackingStore?.Set("cloudProvisioningScore", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore CloudProvisioningScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore>("cloudProvisioningScore"); }
+            set { BackingStore?.Set("cloudProvisioningScore", value); }
+        }
+#endif
         /// <summary>When TRUE, indicates the device&apos;s compliance policy is set to intune. When FALSE, indicates it&apos;s not set to intune. Supports: $select, $OrderBy. Read-only.</summary>
         public bool? CompliancePolicySetToIntune
         {
@@ -316,17 +346,37 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("upgradeEligibility", value); }
         }
         /// <summary>Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? WindowsScore
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore? WindowsScore
         {
-            get { return BackingStore?.Get<double?>("windowsScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore?>("windowsScore"); }
             set { BackingStore?.Set("windowsScore", value); }
         }
-        /// <summary>Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? WorkFromAnywhereScore
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore WindowsScore
         {
-            get { return BackingStore?.Get<double?>("workFromAnywhereScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore>("windowsScore"); }
+            set { BackingStore?.Set("windowsScore", value); }
+        }
+#endif
+        /// <summary>Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore? WorkFromAnywhereScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore?>("workFromAnywhereScore"); }
             set { BackingStore?.Set("workFromAnywhereScore", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore WorkFromAnywhereScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore>("workFromAnywhereScore"); }
+            set { BackingStore?.Set("workFromAnywhereScore", value); }
+        }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -350,9 +400,9 @@ namespace Microsoft.Graph.Models
                 { "azureAdDeviceId", n => { AzureAdDeviceId = n.GetStringValue(); } },
                 { "azureAdJoinType", n => { AzureAdJoinType = n.GetStringValue(); } },
                 { "azureAdRegistered", n => { AzureAdRegistered = n.GetBoolValue(); } },
-                { "cloudIdentityScore", n => { CloudIdentityScore = n.GetDoubleValue(); } },
-                { "cloudManagementScore", n => { CloudManagementScore = n.GetDoubleValue(); } },
-                { "cloudProvisioningScore", n => { CloudProvisioningScore = n.GetDoubleValue(); } },
+                { "cloudIdentityScore", n => { CloudIdentityScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore.CreateFromDiscriminatorValue); } },
+                { "cloudManagementScore", n => { CloudManagementScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore.CreateFromDiscriminatorValue); } },
+                { "cloudProvisioningScore", n => { CloudProvisioningScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore.CreateFromDiscriminatorValue); } },
                 { "compliancePolicySetToIntune", n => { CompliancePolicySetToIntune = n.GetBoolValue(); } },
                 { "deviceId", n => { DeviceId = n.GetStringValue(); } },
                 { "deviceName", n => { DeviceName = n.GetStringValue(); } },
@@ -377,8 +427,8 @@ namespace Microsoft.Graph.Models
                 { "tenantAttached", n => { TenantAttached = n.GetBoolValue(); } },
                 { "tpmCheckFailed", n => { TpmCheckFailed = n.GetBoolValue(); } },
                 { "upgradeEligibility", n => { UpgradeEligibility = n.GetEnumValue<global::Microsoft.Graph.Models.OperatingSystemUpgradeEligibility>(); } },
-                { "windowsScore", n => { WindowsScore = n.GetDoubleValue(); } },
-                { "workFromAnywhereScore", n => { WorkFromAnywhereScore = n.GetDoubleValue(); } },
+                { "windowsScore", n => { WindowsScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore.CreateFromDiscriminatorValue); } },
+                { "workFromAnywhereScore", n => { WorkFromAnywhereScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -394,9 +444,9 @@ namespace Microsoft.Graph.Models
             writer.WriteStringValue("azureAdDeviceId", AzureAdDeviceId);
             writer.WriteStringValue("azureAdJoinType", AzureAdJoinType);
             writer.WriteBoolValue("azureAdRegistered", AzureAdRegistered);
-            writer.WriteDoubleValue("cloudIdentityScore", CloudIdentityScore);
-            writer.WriteDoubleValue("cloudManagementScore", CloudManagementScore);
-            writer.WriteDoubleValue("cloudProvisioningScore", CloudProvisioningScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore>("cloudIdentityScore", CloudIdentityScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore>("cloudManagementScore", CloudManagementScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore>("cloudProvisioningScore", CloudProvisioningScore);
             writer.WriteBoolValue("compliancePolicySetToIntune", CompliancePolicySetToIntune);
             writer.WriteStringValue("deviceId", DeviceId);
             writer.WriteStringValue("deviceName", DeviceName);
@@ -421,8 +471,488 @@ namespace Microsoft.Graph.Models
             writer.WriteBoolValue("tenantAttached", TenantAttached);
             writer.WriteBoolValue("tpmCheckFailed", TpmCheckFailed);
             writer.WriteEnumValue<global::Microsoft.Graph.Models.OperatingSystemUpgradeEligibility>("upgradeEligibility", UpgradeEligibility);
-            writer.WriteDoubleValue("windowsScore", WindowsScore);
-            writer.WriteDoubleValue("workFromAnywhereScore", WorkFromAnywhereScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore>("windowsScore", WindowsScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore>("workFromAnywhereScore", WorkFromAnywhereScore);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudIdentityScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudManagementScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_cloudProvisioningScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_windowsScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereDevice.UserExperienceAnalyticsWorkFromAnywhereDevice_workFromAnywhereScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

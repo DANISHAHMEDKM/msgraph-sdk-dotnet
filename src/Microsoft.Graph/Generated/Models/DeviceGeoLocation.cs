@@ -11,7 +11,7 @@ namespace Microsoft.Graph.Models
     /// <summary>
     /// Device location
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     public partial class DeviceGeoLocation : IAdditionalDataHolder, IBackedModel, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -21,25 +21,55 @@ namespace Microsoft.Graph.Models
             set { BackingStore.Set("AdditionalData", value); }
         }
         /// <summary>Altitude, given in meters above sea level</summary>
-        public double? Altitude
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude? Altitude
         {
-            get { return BackingStore?.Get<double?>("altitude"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude?>("altitude"); }
             set { BackingStore?.Set("altitude", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude Altitude
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude>("altitude"); }
+            set { BackingStore?.Set("altitude", value); }
+        }
+#endif
         /// <summary>Stores model information.</summary>
         public IBackingStore BackingStore { get; private set; }
         /// <summary>Heading in degrees from true north</summary>
-        public double? Heading
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading? Heading
         {
-            get { return BackingStore?.Get<double?>("heading"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading?>("heading"); }
             set { BackingStore?.Set("heading", value); }
         }
-        /// <summary>Accuracy of longitude and latitude in meters</summary>
-        public double? HorizontalAccuracy
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading Heading
         {
-            get { return BackingStore?.Get<double?>("horizontalAccuracy"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading>("heading"); }
+            set { BackingStore?.Set("heading", value); }
+        }
+#endif
+        /// <summary>Accuracy of longitude and latitude in meters</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy? HorizontalAccuracy
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy?>("horizontalAccuracy"); }
             set { BackingStore?.Set("horizontalAccuracy", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy HorizontalAccuracy
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy>("horizontalAccuracy"); }
+            set { BackingStore?.Set("horizontalAccuracy", value); }
+        }
+#endif
         /// <summary>Time at which location was recorded, relative to UTC</summary>
         public DateTimeOffset? LastCollectedDateTime
         {
@@ -47,17 +77,37 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("lastCollectedDateTime", value); }
         }
         /// <summary>Latitude coordinate of the device&apos;s location</summary>
-        public double? Latitude
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude? Latitude
         {
-            get { return BackingStore?.Get<double?>("latitude"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude?>("latitude"); }
             set { BackingStore?.Set("latitude", value); }
         }
-        /// <summary>Longitude coordinate of the device&apos;s location</summary>
-        public double? Longitude
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude Latitude
         {
-            get { return BackingStore?.Get<double?>("longitude"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude>("latitude"); }
+            set { BackingStore?.Set("latitude", value); }
+        }
+#endif
+        /// <summary>Longitude coordinate of the device&apos;s location</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude? Longitude
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude?>("longitude"); }
             set { BackingStore?.Set("longitude", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude Longitude
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude>("longitude"); }
+            set { BackingStore?.Set("longitude", value); }
+        }
+#endif
         /// <summary>The OdataType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,17 +125,37 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>Speed the device is traveling in meters per second</summary>
-        public double? Speed
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed? Speed
         {
-            get { return BackingStore?.Get<double?>("speed"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed?>("speed"); }
             set { BackingStore?.Set("speed", value); }
         }
-        /// <summary>Accuracy of altitude in meters</summary>
-        public double? VerticalAccuracy
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed Speed
         {
-            get { return BackingStore?.Get<double?>("verticalAccuracy"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed>("speed"); }
+            set { BackingStore?.Set("speed", value); }
+        }
+#endif
+        /// <summary>Accuracy of altitude in meters</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy? VerticalAccuracy
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy?>("verticalAccuracy"); }
             set { BackingStore?.Set("verticalAccuracy", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy VerticalAccuracy
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy>("verticalAccuracy"); }
+            set { BackingStore?.Set("verticalAccuracy", value); }
+        }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation"/> and sets the default values.
         /// </summary>
@@ -112,15 +182,15 @@ namespace Microsoft.Graph.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "altitude", n => { Altitude = n.GetDoubleValue(); } },
-                { "heading", n => { Heading = n.GetDoubleValue(); } },
-                { "horizontalAccuracy", n => { HorizontalAccuracy = n.GetDoubleValue(); } },
+                { "altitude", n => { Altitude = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude.CreateFromDiscriminatorValue); } },
+                { "heading", n => { Heading = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading.CreateFromDiscriminatorValue); } },
+                { "horizontalAccuracy", n => { HorizontalAccuracy = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy.CreateFromDiscriminatorValue); } },
                 { "lastCollectedDateTime", n => { LastCollectedDateTime = n.GetDateTimeOffsetValue(); } },
-                { "latitude", n => { Latitude = n.GetDoubleValue(); } },
-                { "longitude", n => { Longitude = n.GetDoubleValue(); } },
+                { "latitude", n => { Latitude = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude.CreateFromDiscriminatorValue); } },
+                { "longitude", n => { Longitude = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude.CreateFromDiscriminatorValue); } },
                 { "@odata.type", n => { OdataType = n.GetStringValue(); } },
-                { "speed", n => { Speed = n.GetDoubleValue(); } },
-                { "verticalAccuracy", n => { VerticalAccuracy = n.GetDoubleValue(); } },
+                { "speed", n => { Speed = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed.CreateFromDiscriminatorValue); } },
+                { "verticalAccuracy", n => { VerticalAccuracy = n.GetObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy>(global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -130,16 +200,688 @@ namespace Microsoft.Graph.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteDoubleValue("altitude", Altitude);
-            writer.WriteDoubleValue("heading", Heading);
-            writer.WriteDoubleValue("horizontalAccuracy", HorizontalAccuracy);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude>("altitude", Altitude);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading>("heading", Heading);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy>("horizontalAccuracy", HorizontalAccuracy);
             writer.WriteDateTimeOffsetValue("lastCollectedDateTime", LastCollectedDateTime);
-            writer.WriteDoubleValue("latitude", Latitude);
-            writer.WriteDoubleValue("longitude", Longitude);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude>("latitude", Latitude);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude>("longitude", Longitude);
             writer.WriteStringValue("@odata.type", OdataType);
-            writer.WriteDoubleValue("speed", Speed);
-            writer.WriteDoubleValue("verticalAccuracy", VerticalAccuracy);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed>("speed", Speed);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy>("verticalAccuracy", VerticalAccuracy);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_altitude : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_altitude()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_altitude();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_heading : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_heading()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_heading();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_horizontalAccuracy : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_horizontalAccuracy()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_horizontalAccuracy();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_latitude : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_latitude()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_latitude();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_longitude : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_longitude()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_longitude();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_speed : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_speed()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_speed();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceGeoLocation_verticalAccuracy : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy"/> and sets the default values.
+            /// </summary>
+            public DeviceGeoLocation_verticalAccuracy()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.DeviceGeoLocation.DeviceGeoLocation_verticalAccuracy();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

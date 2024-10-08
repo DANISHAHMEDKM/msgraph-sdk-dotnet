@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class MeetingTimeSuggestion : IAdditionalDataHolder, IBackedModel, IParsable
     #pragma warning restore CS1591
@@ -38,11 +38,21 @@ namespace Microsoft.Graph.Models
         /// <summary>Stores model information.</summary>
         public IBackingStore BackingStore { get; private set; }
         /// <summary>A percentage that represents the likelhood of all the attendees attending.</summary>
-        public double? Confidence
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence? Confidence
         {
-            get { return BackingStore?.Get<double?>("confidence"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence?>("confidence"); }
             set { BackingStore?.Set("confidence", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence Confidence
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence>("confidence"); }
+            set { BackingStore?.Set("confidence", value); }
+        }
+#endif
         /// <summary>An array that specifies the name and geographic location of each meeting location for this meeting suggestion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,7 +156,7 @@ namespace Microsoft.Graph.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attendeeAvailability", n => { AttendeeAvailability = n.GetCollectionOfObjectValues<global::Microsoft.Graph.Models.AttendeeAvailability>(global::Microsoft.Graph.Models.AttendeeAvailability.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "confidence", n => { Confidence = n.GetDoubleValue(); } },
+                { "confidence", n => { Confidence = n.GetObjectValue<global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence>(global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence.CreateFromDiscriminatorValue); } },
                 { "locations", n => { Locations = n.GetCollectionOfObjectValues<global::Microsoft.Graph.Models.Location>(global::Microsoft.Graph.Models.Location.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "meetingTimeSlot", n => { MeetingTimeSlot = n.GetObjectValue<global::Microsoft.Graph.Models.TimeSlot>(global::Microsoft.Graph.Models.TimeSlot.CreateFromDiscriminatorValue); } },
                 { "@odata.type", n => { OdataType = n.GetStringValue(); } },
@@ -163,7 +173,7 @@ namespace Microsoft.Graph.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Microsoft.Graph.Models.AttendeeAvailability>("attendeeAvailability", AttendeeAvailability);
-            writer.WriteDoubleValue("confidence", Confidence);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence>("confidence", Confidence);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Graph.Models.Location>("locations", Locations);
             writer.WriteObjectValue<global::Microsoft.Graph.Models.TimeSlot>("meetingTimeSlot", MeetingTimeSlot);
             writer.WriteStringValue("@odata.type", OdataType);
@@ -171,6 +181,102 @@ namespace Microsoft.Graph.Models
             writer.WriteEnumValue<global::Microsoft.Graph.Models.FreeBusyStatus>("organizerAvailability", OrganizerAvailability);
             writer.WriteStringValue("suggestionReason", SuggestionReason);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class MeetingTimeSuggestion_confidence : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence"/> and sets the default values.
+            /// </summary>
+            public MeetingTimeSuggestion_confidence()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.MeetingTimeSuggestion.MeetingTimeSuggestion_confidence();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

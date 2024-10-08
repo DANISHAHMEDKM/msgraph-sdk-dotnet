@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class WorkbookRangeFormat : global::Microsoft.Graph.Models.Entity, IParsable
     #pragma warning restore CS1591
@@ -29,11 +29,21 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>The width of all columns within the range. If the column widths aren&apos;t uniform, null will be returned.</summary>
-        public double? ColumnWidth
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth? ColumnWidth
         {
-            get { return BackingStore?.Get<double?>("columnWidth"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth?>("columnWidth"); }
             set { BackingStore?.Set("columnWidth", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth ColumnWidth
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth>("columnWidth"); }
+            set { BackingStore?.Set("columnWidth", value); }
+        }
+#endif
         /// <summary>Returns the fill object defined on the overall range. Read-only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,11 +109,21 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>The height of all rows in the range. If the row heights aren&apos;t uniform null will be returned.</summary>
-        public double? RowHeight
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight? RowHeight
         {
-            get { return BackingStore?.Get<double?>("rowHeight"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight?>("rowHeight"); }
             set { BackingStore?.Set("rowHeight", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight RowHeight
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight>("rowHeight"); }
+            set { BackingStore?.Set("rowHeight", value); }
+        }
+#endif
         /// <summary>The vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,12 +165,12 @@ namespace Microsoft.Graph.Models
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "borders", n => { Borders = n.GetCollectionOfObjectValues<global::Microsoft.Graph.Models.WorkbookRangeBorder>(global::Microsoft.Graph.Models.WorkbookRangeBorder.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "columnWidth", n => { ColumnWidth = n.GetDoubleValue(); } },
+                { "columnWidth", n => { ColumnWidth = n.GetObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth>(global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth.CreateFromDiscriminatorValue); } },
                 { "fill", n => { Fill = n.GetObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFill>(global::Microsoft.Graph.Models.WorkbookRangeFill.CreateFromDiscriminatorValue); } },
                 { "font", n => { Font = n.GetObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFont>(global::Microsoft.Graph.Models.WorkbookRangeFont.CreateFromDiscriminatorValue); } },
                 { "horizontalAlignment", n => { HorizontalAlignment = n.GetStringValue(); } },
                 { "protection", n => { Protection = n.GetObjectValue<global::Microsoft.Graph.Models.WorkbookFormatProtection>(global::Microsoft.Graph.Models.WorkbookFormatProtection.CreateFromDiscriminatorValue); } },
-                { "rowHeight", n => { RowHeight = n.GetDoubleValue(); } },
+                { "rowHeight", n => { RowHeight = n.GetObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight>(global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight.CreateFromDiscriminatorValue); } },
                 { "verticalAlignment", n => { VerticalAlignment = n.GetStringValue(); } },
                 { "wrapText", n => { WrapText = n.GetBoolValue(); } },
             };
@@ -164,14 +184,206 @@ namespace Microsoft.Graph.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Graph.Models.WorkbookRangeBorder>("borders", Borders);
-            writer.WriteDoubleValue("columnWidth", ColumnWidth);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth>("columnWidth", ColumnWidth);
             writer.WriteObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFill>("fill", Fill);
             writer.WriteObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFont>("font", Font);
             writer.WriteStringValue("horizontalAlignment", HorizontalAlignment);
             writer.WriteObjectValue<global::Microsoft.Graph.Models.WorkbookFormatProtection>("protection", Protection);
-            writer.WriteDoubleValue("rowHeight", RowHeight);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight>("rowHeight", RowHeight);
             writer.WriteStringValue("verticalAlignment", VerticalAlignment);
             writer.WriteBoolValue("wrapText", WrapText);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class WorkbookRangeFormat_columnWidth : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth"/> and sets the default values.
+            /// </summary>
+            public WorkbookRangeFormat_columnWidth()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_columnWidth();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class WorkbookRangeFormat_rowHeight : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight"/> and sets the default values.
+            /// </summary>
+            public WorkbookRangeFormat_rowHeight()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.WorkbookRangeFormat.WorkbookRangeFormat_rowHeight();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Microsoft.Graph.Models
     /// <summary>
     /// Represents a booked appointment of a service by a customer in a business.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     public partial class BookingAppointment : global::Microsoft.Graph.Models.Entity, IParsable
     {
         /// <summary>Additional information that is sent to the customer when an appointment is confirmed.</summary>
@@ -250,11 +250,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("preBuffer", value); }
         }
         /// <summary>The regular price for an appointment for the specified bookingService.</summary>
-        public double? Price
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price? Price
         {
-            get { return BackingStore?.Get<double?>("price"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price?>("price"); }
             set { BackingStore?.Set("price", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price Price
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price>("price"); }
+            set { BackingStore?.Set("price", value); }
+        }
+#endif
         /// <summary>Represents the type of pricing of a booking service.</summary>
         public global::Microsoft.Graph.Models.BookingPriceType? PriceType
         {
@@ -434,7 +444,7 @@ namespace Microsoft.Graph.Models
                 { "optOutOfCustomerEmail", n => { OptOutOfCustomerEmail = n.GetBoolValue(); } },
                 { "postBuffer", n => { PostBuffer = n.GetTimeSpanValue(); } },
                 { "preBuffer", n => { PreBuffer = n.GetTimeSpanValue(); } },
-                { "price", n => { Price = n.GetDoubleValue(); } },
+                { "price", n => { Price = n.GetObjectValue<global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price>(global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price.CreateFromDiscriminatorValue); } },
                 { "priceType", n => { PriceType = n.GetEnumValue<global::Microsoft.Graph.Models.BookingPriceType>(); } },
                 { "reminders", n => { Reminders = n.GetCollectionOfObjectValues<global::Microsoft.Graph.Models.BookingReminder>(global::Microsoft.Graph.Models.BookingReminder.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "selfServiceAppointmentId", n => { SelfServiceAppointmentId = n.GetStringValue(); } },
@@ -474,7 +484,7 @@ namespace Microsoft.Graph.Models
             writer.WriteBoolValue("optOutOfCustomerEmail", OptOutOfCustomerEmail);
             writer.WriteTimeSpanValue("postBuffer", PostBuffer);
             writer.WriteTimeSpanValue("preBuffer", PreBuffer);
-            writer.WriteDoubleValue("price", Price);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price>("price", Price);
             writer.WriteEnumValue<global::Microsoft.Graph.Models.BookingPriceType>("priceType", PriceType);
             writer.WriteCollectionOfObjectValues<global::Microsoft.Graph.Models.BookingReminder>("reminders", Reminders);
             writer.WriteStringValue("selfServiceAppointmentId", SelfServiceAppointmentId);
@@ -485,6 +495,102 @@ namespace Microsoft.Graph.Models
             writer.WriteBoolValue("smsNotificationsEnabled", SmsNotificationsEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("staffMemberIds", StaffMemberIds);
             writer.WriteObjectValue<global::Microsoft.Graph.Models.DateTimeTimeZone>("startDateTime", StartDateTime);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class BookingAppointment_price : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price"/> and sets the default values.
+            /// </summary>
+            public BookingAppointment_price()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.BookingAppointment.BookingAppointment_price();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

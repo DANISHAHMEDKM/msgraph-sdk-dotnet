@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class WebPartPosition : IAdditionalDataHolder, IBackedModel, IParsable
     #pragma warning restore CS1591
@@ -22,17 +22,37 @@ namespace Microsoft.Graph.Models
         /// <summary>Stores model information.</summary>
         public IBackingStore BackingStore { get; private set; }
         /// <summary>Indicates the identifier of the column where the web part is located.</summary>
-        public double? ColumnId
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId? ColumnId
         {
-            get { return BackingStore?.Get<double?>("columnId"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId?>("columnId"); }
             set { BackingStore?.Set("columnId", value); }
         }
-        /// <summary>Indicates the horizontal section where the web part is located.</summary>
-        public double? HorizontalSectionId
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId ColumnId
         {
-            get { return BackingStore?.Get<double?>("horizontalSectionId"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId>("columnId"); }
+            set { BackingStore?.Set("columnId", value); }
+        }
+#endif
+        /// <summary>Indicates the horizontal section where the web part is located.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId? HorizontalSectionId
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId?>("horizontalSectionId"); }
             set { BackingStore?.Set("horizontalSectionId", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId HorizontalSectionId
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId>("horizontalSectionId"); }
+            set { BackingStore?.Set("horizontalSectionId", value); }
+        }
+#endif
         /// <summary>Indicates whether the web part is located in the vertical section.</summary>
         public bool? IsInVerticalSection
         {
@@ -56,11 +76,21 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>Index of the current web part. Represents the order of the web part in this column or section.</summary>
-        public double? WebPartIndex
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex? WebPartIndex
         {
-            get { return BackingStore?.Get<double?>("webPartIndex"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex?>("webPartIndex"); }
             set { BackingStore?.Set("webPartIndex", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex WebPartIndex
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex>("webPartIndex"); }
+            set { BackingStore?.Set("webPartIndex", value); }
+        }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Microsoft.Graph.Models.WebPartPosition"/> and sets the default values.
         /// </summary>
@@ -87,11 +117,11 @@ namespace Microsoft.Graph.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "columnId", n => { ColumnId = n.GetDoubleValue(); } },
-                { "horizontalSectionId", n => { HorizontalSectionId = n.GetDoubleValue(); } },
+                { "columnId", n => { ColumnId = n.GetObjectValue<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId>(global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId.CreateFromDiscriminatorValue); } },
+                { "horizontalSectionId", n => { HorizontalSectionId = n.GetObjectValue<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId>(global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId.CreateFromDiscriminatorValue); } },
                 { "isInVerticalSection", n => { IsInVerticalSection = n.GetBoolValue(); } },
                 { "@odata.type", n => { OdataType = n.GetStringValue(); } },
-                { "webPartIndex", n => { WebPartIndex = n.GetDoubleValue(); } },
+                { "webPartIndex", n => { WebPartIndex = n.GetObjectValue<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex>(global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -101,12 +131,300 @@ namespace Microsoft.Graph.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteDoubleValue("columnId", ColumnId);
-            writer.WriteDoubleValue("horizontalSectionId", HorizontalSectionId);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId>("columnId", ColumnId);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId>("horizontalSectionId", HorizontalSectionId);
             writer.WriteBoolValue("isInVerticalSection", IsInVerticalSection);
             writer.WriteStringValue("@odata.type", OdataType);
-            writer.WriteDoubleValue("webPartIndex", WebPartIndex);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex>("webPartIndex", WebPartIndex);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class WebPartPosition_columnId : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId"/> and sets the default values.
+            /// </summary>
+            public WebPartPosition_columnId()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_columnId();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class WebPartPosition_horizontalSectionId : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId"/> and sets the default values.
+            /// </summary>
+            public WebPartPosition_horizontalSectionId()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_horizontalSectionId();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class WebPartPosition_webPartIndex : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex"/> and sets the default values.
+            /// </summary>
+            public WebPartPosition_webPartIndex()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.WebPartPosition.WebPartPosition_webPartIndex();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

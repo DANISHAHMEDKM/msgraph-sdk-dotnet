@@ -10,21 +10,41 @@ namespace Microsoft.Graph.Models
     /// <summary>
     /// The user experience analytics device performance entity contains device boot performance details.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     public partial class UserExperienceAnalyticsDevicePerformance : global::Microsoft.Graph.Models.Entity, IParsable
     {
         /// <summary>Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999</summary>
-        public double? AverageBlueScreens
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens? AverageBlueScreens
         {
-            get { return BackingStore?.Get<double?>("averageBlueScreens"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens?>("averageBlueScreens"); }
             set { BackingStore?.Set("averageBlueScreens", value); }
         }
-        /// <summary>Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999</summary>
-        public double? AverageRestarts
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens AverageBlueScreens
         {
-            get { return BackingStore?.Get<double?>("averageRestarts"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens>("averageBlueScreens"); }
+            set { BackingStore?.Set("averageBlueScreens", value); }
+        }
+#endif
+        /// <summary>Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts? AverageRestarts
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts?>("averageRestarts"); }
             set { BackingStore?.Set("averageRestarts", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts AverageRestarts
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts>("averageRestarts"); }
+            set { BackingStore?.Set("averageRestarts", value); }
+        }
+#endif
         /// <summary>Number of Blue Screens in the last 30 days. Valid values 0 to 9999999</summary>
         public int? BlueScreenCount
         {
@@ -134,11 +154,21 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? ModelStartupPerformanceScore
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore? ModelStartupPerformanceScore
         {
-            get { return BackingStore?.Get<double?>("modelStartupPerformanceScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore?>("modelStartupPerformanceScore"); }
             set { BackingStore?.Set("modelStartupPerformanceScore", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore ModelStartupPerformanceScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore>("modelStartupPerformanceScore"); }
+            set { BackingStore?.Set("modelStartupPerformanceScore", value); }
+        }
+#endif
         /// <summary>The user experience analytics device Operating System version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,11 +198,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("restartCount", value); }
         }
         /// <summary>The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? StartupPerformanceScore
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore? StartupPerformanceScore
         {
-            get { return BackingStore?.Get<double?>("startupPerformanceScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore?>("startupPerformanceScore"); }
             set { BackingStore?.Set("startupPerformanceScore", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore StartupPerformanceScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore>("startupPerformanceScore"); }
+            set { BackingStore?.Set("startupPerformanceScore", value); }
+        }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -191,8 +231,8 @@ namespace Microsoft.Graph.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "averageBlueScreens", n => { AverageBlueScreens = n.GetDoubleValue(); } },
-                { "averageRestarts", n => { AverageRestarts = n.GetDoubleValue(); } },
+                { "averageBlueScreens", n => { AverageBlueScreens = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens>(global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens.CreateFromDiscriminatorValue); } },
+                { "averageRestarts", n => { AverageRestarts = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts>(global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts.CreateFromDiscriminatorValue); } },
                 { "blueScreenCount", n => { BlueScreenCount = n.GetIntValue(); } },
                 { "bootScore", n => { BootScore = n.GetIntValue(); } },
                 { "coreBootTimeInMs", n => { CoreBootTimeInMs = n.GetIntValue(); } },
@@ -206,11 +246,11 @@ namespace Microsoft.Graph.Models
                 { "loginScore", n => { LoginScore = n.GetIntValue(); } },
                 { "manufacturer", n => { Manufacturer = n.GetStringValue(); } },
                 { "model", n => { Model = n.GetStringValue(); } },
-                { "modelStartupPerformanceScore", n => { ModelStartupPerformanceScore = n.GetDoubleValue(); } },
+                { "modelStartupPerformanceScore", n => { ModelStartupPerformanceScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore.CreateFromDiscriminatorValue); } },
                 { "operatingSystemVersion", n => { OperatingSystemVersion = n.GetStringValue(); } },
                 { "responsiveDesktopTimeInMs", n => { ResponsiveDesktopTimeInMs = n.GetIntValue(); } },
                 { "restartCount", n => { RestartCount = n.GetIntValue(); } },
-                { "startupPerformanceScore", n => { StartupPerformanceScore = n.GetDoubleValue(); } },
+                { "startupPerformanceScore", n => { StartupPerformanceScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -221,8 +261,8 @@ namespace Microsoft.Graph.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteDoubleValue("averageBlueScreens", AverageBlueScreens);
-            writer.WriteDoubleValue("averageRestarts", AverageRestarts);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens>("averageBlueScreens", AverageBlueScreens);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts>("averageRestarts", AverageRestarts);
             writer.WriteIntValue("blueScreenCount", BlueScreenCount);
             writer.WriteIntValue("bootScore", BootScore);
             writer.WriteIntValue("coreBootTimeInMs", CoreBootTimeInMs);
@@ -236,11 +276,395 @@ namespace Microsoft.Graph.Models
             writer.WriteIntValue("loginScore", LoginScore);
             writer.WriteStringValue("manufacturer", Manufacturer);
             writer.WriteStringValue("model", Model);
-            writer.WriteDoubleValue("modelStartupPerformanceScore", ModelStartupPerformanceScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore>("modelStartupPerformanceScore", ModelStartupPerformanceScore);
             writer.WriteStringValue("operatingSystemVersion", OperatingSystemVersion);
             writer.WriteIntValue("responsiveDesktopTimeInMs", ResponsiveDesktopTimeInMs);
             writer.WriteIntValue("restartCount", RestartCount);
-            writer.WriteDoubleValue("startupPerformanceScore", StartupPerformanceScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore>("startupPerformanceScore", StartupPerformanceScore);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsDevicePerformance_averageBlueScreens : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsDevicePerformance_averageBlueScreens()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageBlueScreens();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsDevicePerformance_averageRestarts : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsDevicePerformance_averageRestarts()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_averageRestarts();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsDevicePerformance_startupPerformanceScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsDevicePerformance_startupPerformanceScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsDevicePerformance.UserExperienceAnalyticsDevicePerformance_startupPerformanceScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

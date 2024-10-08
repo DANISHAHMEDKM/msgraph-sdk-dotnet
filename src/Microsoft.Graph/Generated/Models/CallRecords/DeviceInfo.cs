@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models.CallRecords
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class DeviceInfo : IAdditionalDataHolder, IBackedModel, IParsable
     #pragma warning restore CS1591
@@ -54,29 +54,69 @@ namespace Microsoft.Graph.Models.CallRecords
         }
 #endif
         /// <summary>Fraction of the call that the media endpoint detected the capture device was not working properly.</summary>
-        public float? CaptureNotFunctioningEventRatio
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio? CaptureNotFunctioningEventRatio
         {
-            get { return BackingStore?.Get<float?>("captureNotFunctioningEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio?>("captureNotFunctioningEventRatio"); }
             set { BackingStore?.Set("captureNotFunctioningEventRatio", value); }
         }
-        /// <summary>Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.</summary>
-        public float? CpuInsufficentEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio CaptureNotFunctioningEventRatio
         {
-            get { return BackingStore?.Get<float?>("cpuInsufficentEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio>("captureNotFunctioningEventRatio"); }
+            set { BackingStore?.Set("captureNotFunctioningEventRatio", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio? CpuInsufficentEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio?>("cpuInsufficentEventRatio"); }
             set { BackingStore?.Set("cpuInsufficentEventRatio", value); }
         }
-        /// <summary>Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.</summary>
-        public float? DeviceClippingEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio CpuInsufficentEventRatio
         {
-            get { return BackingStore?.Get<float?>("deviceClippingEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio>("cpuInsufficentEventRatio"); }
+            set { BackingStore?.Set("cpuInsufficentEventRatio", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio? DeviceClippingEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio?>("deviceClippingEventRatio"); }
             set { BackingStore?.Set("deviceClippingEventRatio", value); }
         }
-        /// <summary>Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.</summary>
-        public float? DeviceGlitchEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio DeviceClippingEventRatio
         {
-            get { return BackingStore?.Get<float?>("deviceGlitchEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio>("deviceClippingEventRatio"); }
+            set { BackingStore?.Set("deviceClippingEventRatio", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio? DeviceGlitchEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio?>("deviceGlitchEventRatio"); }
             set { BackingStore?.Set("deviceGlitchEventRatio", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio DeviceGlitchEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio>("deviceGlitchEventRatio"); }
+            set { BackingStore?.Set("deviceGlitchEventRatio", value); }
+        }
+#endif
         /// <summary>Number of times during the call that the media endpoint detected howling or screeching audio.</summary>
         public int? HowlingEventCount
         {
@@ -84,29 +124,69 @@ namespace Microsoft.Graph.Models.CallRecords
             set { BackingStore?.Set("howlingEventCount", value); }
         }
         /// <summary>The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.</summary>
-        public float? InitialSignalLevelRootMeanSquare
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare? InitialSignalLevelRootMeanSquare
         {
-            get { return BackingStore?.Get<float?>("initialSignalLevelRootMeanSquare"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare?>("initialSignalLevelRootMeanSquare"); }
             set { BackingStore?.Set("initialSignalLevelRootMeanSquare", value); }
         }
-        /// <summary>Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.</summary>
-        public float? LowSpeechLevelEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare InitialSignalLevelRootMeanSquare
         {
-            get { return BackingStore?.Get<float?>("lowSpeechLevelEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare>("initialSignalLevelRootMeanSquare"); }
+            set { BackingStore?.Set("initialSignalLevelRootMeanSquare", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio? LowSpeechLevelEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio?>("lowSpeechLevelEventRatio"); }
             set { BackingStore?.Set("lowSpeechLevelEventRatio", value); }
         }
-        /// <summary>Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.</summary>
-        public float? LowSpeechToNoiseEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio LowSpeechLevelEventRatio
         {
-            get { return BackingStore?.Get<float?>("lowSpeechToNoiseEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio>("lowSpeechLevelEventRatio"); }
+            set { BackingStore?.Set("lowSpeechLevelEventRatio", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio? LowSpeechToNoiseEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio?>("lowSpeechToNoiseEventRatio"); }
             set { BackingStore?.Set("lowSpeechToNoiseEventRatio", value); }
         }
-        /// <summary>Glitches per 5 minute interval for the media endpoint&apos;s microphone.</summary>
-        public float? MicGlitchRate
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio LowSpeechToNoiseEventRatio
         {
-            get { return BackingStore?.Get<float?>("micGlitchRate"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio>("lowSpeechToNoiseEventRatio"); }
+            set { BackingStore?.Set("lowSpeechToNoiseEventRatio", value); }
+        }
+#endif
+        /// <summary>Glitches per 5 minute interval for the media endpoint&apos;s microphone.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate? MicGlitchRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate?>("micGlitchRate"); }
             set { BackingStore?.Set("micGlitchRate", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate MicGlitchRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate>("micGlitchRate"); }
+            set { BackingStore?.Set("micGlitchRate", value); }
+        }
+#endif
         /// <summary>The OdataType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,23 +248,53 @@ namespace Microsoft.Graph.Models.CallRecords
         }
 #endif
         /// <summary>Fraction of the call that media endpoint detected device render is muted.</summary>
-        public float? RenderMuteEventRatio
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio? RenderMuteEventRatio
         {
-            get { return BackingStore?.Get<float?>("renderMuteEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio?>("renderMuteEventRatio"); }
             set { BackingStore?.Set("renderMuteEventRatio", value); }
         }
-        /// <summary>Fraction of the call that the media endpoint detected the render device was not working properly.</summary>
-        public float? RenderNotFunctioningEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio RenderMuteEventRatio
         {
-            get { return BackingStore?.Get<float?>("renderNotFunctioningEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio>("renderMuteEventRatio"); }
+            set { BackingStore?.Set("renderMuteEventRatio", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that the media endpoint detected the render device was not working properly.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio? RenderNotFunctioningEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio?>("renderNotFunctioningEventRatio"); }
             set { BackingStore?.Set("renderNotFunctioningEventRatio", value); }
         }
-        /// <summary>Fraction of the call that media endpoint detected device render volume is set to 0.</summary>
-        public float? RenderZeroVolumeEventRatio
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio RenderNotFunctioningEventRatio
         {
-            get { return BackingStore?.Get<float?>("renderZeroVolumeEventRatio"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio>("renderNotFunctioningEventRatio"); }
+            set { BackingStore?.Set("renderNotFunctioningEventRatio", value); }
+        }
+#endif
+        /// <summary>Fraction of the call that media endpoint detected device render volume is set to 0.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio? RenderZeroVolumeEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio?>("renderZeroVolumeEventRatio"); }
             set { BackingStore?.Set("renderZeroVolumeEventRatio", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio RenderZeroVolumeEventRatio
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio>("renderZeroVolumeEventRatio"); }
+            set { BackingStore?.Set("renderZeroVolumeEventRatio", value); }
+        }
+#endif
         /// <summary>Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.</summary>
         public int? SentNoiseLevel
         {
@@ -198,11 +308,21 @@ namespace Microsoft.Graph.Models.CallRecords
             set { BackingStore?.Set("sentSignalLevel", value); }
         }
         /// <summary>Glitches per 5 minute internal for the media endpoint&apos;s loudspeaker.</summary>
-        public float? SpeakerGlitchRate
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate? SpeakerGlitchRate
         {
-            get { return BackingStore?.Get<float?>("speakerGlitchRate"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate?>("speakerGlitchRate"); }
             set { BackingStore?.Set("speakerGlitchRate", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate SpeakerGlitchRate
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate>("speakerGlitchRate"); }
+            set { BackingStore?.Set("speakerGlitchRate", value); }
+        }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo"/> and sets the default values.
         /// </summary>
@@ -231,26 +351,26 @@ namespace Microsoft.Graph.Models.CallRecords
             {
                 { "captureDeviceDriver", n => { CaptureDeviceDriver = n.GetStringValue(); } },
                 { "captureDeviceName", n => { CaptureDeviceName = n.GetStringValue(); } },
-                { "captureNotFunctioningEventRatio", n => { CaptureNotFunctioningEventRatio = n.GetFloatValue(); } },
-                { "cpuInsufficentEventRatio", n => { CpuInsufficentEventRatio = n.GetFloatValue(); } },
-                { "deviceClippingEventRatio", n => { DeviceClippingEventRatio = n.GetFloatValue(); } },
-                { "deviceGlitchEventRatio", n => { DeviceGlitchEventRatio = n.GetFloatValue(); } },
+                { "captureNotFunctioningEventRatio", n => { CaptureNotFunctioningEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio.CreateFromDiscriminatorValue); } },
+                { "cpuInsufficentEventRatio", n => { CpuInsufficentEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio.CreateFromDiscriminatorValue); } },
+                { "deviceClippingEventRatio", n => { DeviceClippingEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio.CreateFromDiscriminatorValue); } },
+                { "deviceGlitchEventRatio", n => { DeviceGlitchEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio.CreateFromDiscriminatorValue); } },
                 { "howlingEventCount", n => { HowlingEventCount = n.GetIntValue(); } },
-                { "initialSignalLevelRootMeanSquare", n => { InitialSignalLevelRootMeanSquare = n.GetFloatValue(); } },
-                { "lowSpeechLevelEventRatio", n => { LowSpeechLevelEventRatio = n.GetFloatValue(); } },
-                { "lowSpeechToNoiseEventRatio", n => { LowSpeechToNoiseEventRatio = n.GetFloatValue(); } },
-                { "micGlitchRate", n => { MicGlitchRate = n.GetFloatValue(); } },
+                { "initialSignalLevelRootMeanSquare", n => { InitialSignalLevelRootMeanSquare = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare.CreateFromDiscriminatorValue); } },
+                { "lowSpeechLevelEventRatio", n => { LowSpeechLevelEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio.CreateFromDiscriminatorValue); } },
+                { "lowSpeechToNoiseEventRatio", n => { LowSpeechToNoiseEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio.CreateFromDiscriminatorValue); } },
+                { "micGlitchRate", n => { MicGlitchRate = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate.CreateFromDiscriminatorValue); } },
                 { "@odata.type", n => { OdataType = n.GetStringValue(); } },
                 { "receivedNoiseLevel", n => { ReceivedNoiseLevel = n.GetIntValue(); } },
                 { "receivedSignalLevel", n => { ReceivedSignalLevel = n.GetIntValue(); } },
                 { "renderDeviceDriver", n => { RenderDeviceDriver = n.GetStringValue(); } },
                 { "renderDeviceName", n => { RenderDeviceName = n.GetStringValue(); } },
-                { "renderMuteEventRatio", n => { RenderMuteEventRatio = n.GetFloatValue(); } },
-                { "renderNotFunctioningEventRatio", n => { RenderNotFunctioningEventRatio = n.GetFloatValue(); } },
-                { "renderZeroVolumeEventRatio", n => { RenderZeroVolumeEventRatio = n.GetFloatValue(); } },
+                { "renderMuteEventRatio", n => { RenderMuteEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio.CreateFromDiscriminatorValue); } },
+                { "renderNotFunctioningEventRatio", n => { RenderNotFunctioningEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio.CreateFromDiscriminatorValue); } },
+                { "renderZeroVolumeEventRatio", n => { RenderZeroVolumeEventRatio = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio.CreateFromDiscriminatorValue); } },
                 { "sentNoiseLevel", n => { SentNoiseLevel = n.GetIntValue(); } },
                 { "sentSignalLevel", n => { SentSignalLevel = n.GetIntValue(); } },
-                { "speakerGlitchRate", n => { SpeakerGlitchRate = n.GetFloatValue(); } },
+                { "speakerGlitchRate", n => { SpeakerGlitchRate = n.GetObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate>(global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -262,27 +382,1179 @@ namespace Microsoft.Graph.Models.CallRecords
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("captureDeviceDriver", CaptureDeviceDriver);
             writer.WriteStringValue("captureDeviceName", CaptureDeviceName);
-            writer.WriteFloatValue("captureNotFunctioningEventRatio", CaptureNotFunctioningEventRatio);
-            writer.WriteFloatValue("cpuInsufficentEventRatio", CpuInsufficentEventRatio);
-            writer.WriteFloatValue("deviceClippingEventRatio", DeviceClippingEventRatio);
-            writer.WriteFloatValue("deviceGlitchEventRatio", DeviceGlitchEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio>("captureNotFunctioningEventRatio", CaptureNotFunctioningEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio>("cpuInsufficentEventRatio", CpuInsufficentEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio>("deviceClippingEventRatio", DeviceClippingEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio>("deviceGlitchEventRatio", DeviceGlitchEventRatio);
             writer.WriteIntValue("howlingEventCount", HowlingEventCount);
-            writer.WriteFloatValue("initialSignalLevelRootMeanSquare", InitialSignalLevelRootMeanSquare);
-            writer.WriteFloatValue("lowSpeechLevelEventRatio", LowSpeechLevelEventRatio);
-            writer.WriteFloatValue("lowSpeechToNoiseEventRatio", LowSpeechToNoiseEventRatio);
-            writer.WriteFloatValue("micGlitchRate", MicGlitchRate);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare>("initialSignalLevelRootMeanSquare", InitialSignalLevelRootMeanSquare);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio>("lowSpeechLevelEventRatio", LowSpeechLevelEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio>("lowSpeechToNoiseEventRatio", LowSpeechToNoiseEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate>("micGlitchRate", MicGlitchRate);
             writer.WriteStringValue("@odata.type", OdataType);
             writer.WriteIntValue("receivedNoiseLevel", ReceivedNoiseLevel);
             writer.WriteIntValue("receivedSignalLevel", ReceivedSignalLevel);
             writer.WriteStringValue("renderDeviceDriver", RenderDeviceDriver);
             writer.WriteStringValue("renderDeviceName", RenderDeviceName);
-            writer.WriteFloatValue("renderMuteEventRatio", RenderMuteEventRatio);
-            writer.WriteFloatValue("renderNotFunctioningEventRatio", RenderNotFunctioningEventRatio);
-            writer.WriteFloatValue("renderZeroVolumeEventRatio", RenderZeroVolumeEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio>("renderMuteEventRatio", RenderMuteEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio>("renderNotFunctioningEventRatio", RenderNotFunctioningEventRatio);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio>("renderZeroVolumeEventRatio", RenderZeroVolumeEventRatio);
             writer.WriteIntValue("sentNoiseLevel", SentNoiseLevel);
             writer.WriteIntValue("sentSignalLevel", SentSignalLevel);
-            writer.WriteFloatValue("speakerGlitchRate", SpeakerGlitchRate);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate>("speakerGlitchRate", SpeakerGlitchRate);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_captureNotFunctioningEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_captureNotFunctioningEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_captureNotFunctioningEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_cpuInsufficentEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_cpuInsufficentEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_cpuInsufficentEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_deviceClippingEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_deviceClippingEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceClippingEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_deviceGlitchEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_deviceGlitchEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_deviceGlitchEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_initialSignalLevelRootMeanSquare : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_initialSignalLevelRootMeanSquare()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_initialSignalLevelRootMeanSquare();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_lowSpeechLevelEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_lowSpeechLevelEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechLevelEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_lowSpeechToNoiseEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_lowSpeechToNoiseEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_lowSpeechToNoiseEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_micGlitchRate : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_micGlitchRate()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_micGlitchRate();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_renderMuteEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_renderMuteEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderMuteEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_renderNotFunctioningEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_renderNotFunctioningEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderNotFunctioningEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_renderZeroVolumeEventRatio : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_renderZeroVolumeEventRatio()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_renderZeroVolumeEventRatio();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="float"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class DeviceInfo_speakerGlitchRate : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="float"/></summary>
+            public float? Float
+            {
+                get { return BackingStore?.Get<float?>("float"); }
+                set { BackingStore?.Set("float", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate"/> and sets the default values.
+            /// </summary>
+            public DeviceInfo_speakerGlitchRate()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.CallRecords.DeviceInfo.DeviceInfo_speakerGlitchRate();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetFloatValue() is float floatValue)
+                {
+                    result.Float = floatValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Float != null)
+                {
+                    writer.WriteFloatValue(null, Float);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

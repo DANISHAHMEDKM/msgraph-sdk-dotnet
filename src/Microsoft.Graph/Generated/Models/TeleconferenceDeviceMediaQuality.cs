@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class TeleconferenceDeviceMediaQuality : IAdditionalDataHolder, IBackedModel, IParsable
     #pragma warning restore CS1591
@@ -26,11 +26,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("averageInboundJitter", value); }
         }
         /// <summary>The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.</summary>
-        public double? AverageInboundPacketLossRateInPercentage
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage? AverageInboundPacketLossRateInPercentage
         {
-            get { return BackingStore?.Get<double?>("averageInboundPacketLossRateInPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage?>("averageInboundPacketLossRateInPercentage"); }
             set { BackingStore?.Set("averageInboundPacketLossRateInPercentage", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage AverageInboundPacketLossRateInPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage>("averageInboundPacketLossRateInPercentage"); }
+            set { BackingStore?.Set("averageInboundPacketLossRateInPercentage", value); }
+        }
+#endif
         /// <summary>The average inbound stream network round trip delay.</summary>
         public TimeSpan? AverageInboundRoundTripDelay
         {
@@ -44,11 +54,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("averageOutboundJitter", value); }
         }
         /// <summary>The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.</summary>
-        public double? AverageOutboundPacketLossRateInPercentage
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage? AverageOutboundPacketLossRateInPercentage
         {
-            get { return BackingStore?.Get<double?>("averageOutboundPacketLossRateInPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage?>("averageOutboundPacketLossRateInPercentage"); }
             set { BackingStore?.Set("averageOutboundPacketLossRateInPercentage", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage AverageOutboundPacketLossRateInPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage>("averageOutboundPacketLossRateInPercentage"); }
+            set { BackingStore?.Set("averageOutboundPacketLossRateInPercentage", value); }
+        }
+#endif
         /// <summary>The average outbound stream network round trip delay.</summary>
         public TimeSpan? AverageOutboundRoundTripDelay
         {
@@ -98,11 +118,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("maximumInboundJitter", value); }
         }
         /// <summary>The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.</summary>
-        public double? MaximumInboundPacketLossRateInPercentage
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage? MaximumInboundPacketLossRateInPercentage
         {
-            get { return BackingStore?.Get<double?>("maximumInboundPacketLossRateInPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage?>("maximumInboundPacketLossRateInPercentage"); }
             set { BackingStore?.Set("maximumInboundPacketLossRateInPercentage", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage MaximumInboundPacketLossRateInPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage>("maximumInboundPacketLossRateInPercentage"); }
+            set { BackingStore?.Set("maximumInboundPacketLossRateInPercentage", value); }
+        }
+#endif
         /// <summary>The maximum inbound stream network round trip delay.</summary>
         public TimeSpan? MaximumInboundRoundTripDelay
         {
@@ -116,11 +146,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("maximumOutboundJitter", value); }
         }
         /// <summary>The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.</summary>
-        public double? MaximumOutboundPacketLossRateInPercentage
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage? MaximumOutboundPacketLossRateInPercentage
         {
-            get { return BackingStore?.Get<double?>("maximumOutboundPacketLossRateInPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage?>("maximumOutboundPacketLossRateInPercentage"); }
             set { BackingStore?.Set("maximumOutboundPacketLossRateInPercentage", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage MaximumOutboundPacketLossRateInPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage>("maximumOutboundPacketLossRateInPercentage"); }
+            set { BackingStore?.Set("maximumOutboundPacketLossRateInPercentage", value); }
+        }
+#endif
         /// <summary>The maximum outbound stream network round trip delay.</summary>
         public TimeSpan? MaximumOutboundRoundTripDelay
         {
@@ -217,20 +257,20 @@ namespace Microsoft.Graph.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "averageInboundJitter", n => { AverageInboundJitter = n.GetTimeSpanValue(); } },
-                { "averageInboundPacketLossRateInPercentage", n => { AverageInboundPacketLossRateInPercentage = n.GetDoubleValue(); } },
+                { "averageInboundPacketLossRateInPercentage", n => { AverageInboundPacketLossRateInPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage>(global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage.CreateFromDiscriminatorValue); } },
                 { "averageInboundRoundTripDelay", n => { AverageInboundRoundTripDelay = n.GetTimeSpanValue(); } },
                 { "averageOutboundJitter", n => { AverageOutboundJitter = n.GetTimeSpanValue(); } },
-                { "averageOutboundPacketLossRateInPercentage", n => { AverageOutboundPacketLossRateInPercentage = n.GetDoubleValue(); } },
+                { "averageOutboundPacketLossRateInPercentage", n => { AverageOutboundPacketLossRateInPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage>(global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage.CreateFromDiscriminatorValue); } },
                 { "averageOutboundRoundTripDelay", n => { AverageOutboundRoundTripDelay = n.GetTimeSpanValue(); } },
                 { "channelIndex", n => { ChannelIndex = n.GetIntValue(); } },
                 { "inboundPackets", n => { InboundPackets = n.GetLongValue(); } },
                 { "localIPAddress", n => { LocalIPAddress = n.GetStringValue(); } },
                 { "localPort", n => { LocalPort = n.GetIntValue(); } },
                 { "maximumInboundJitter", n => { MaximumInboundJitter = n.GetTimeSpanValue(); } },
-                { "maximumInboundPacketLossRateInPercentage", n => { MaximumInboundPacketLossRateInPercentage = n.GetDoubleValue(); } },
+                { "maximumInboundPacketLossRateInPercentage", n => { MaximumInboundPacketLossRateInPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage>(global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage.CreateFromDiscriminatorValue); } },
                 { "maximumInboundRoundTripDelay", n => { MaximumInboundRoundTripDelay = n.GetTimeSpanValue(); } },
                 { "maximumOutboundJitter", n => { MaximumOutboundJitter = n.GetTimeSpanValue(); } },
-                { "maximumOutboundPacketLossRateInPercentage", n => { MaximumOutboundPacketLossRateInPercentage = n.GetDoubleValue(); } },
+                { "maximumOutboundPacketLossRateInPercentage", n => { MaximumOutboundPacketLossRateInPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage>(global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage.CreateFromDiscriminatorValue); } },
                 { "maximumOutboundRoundTripDelay", n => { MaximumOutboundRoundTripDelay = n.GetTimeSpanValue(); } },
                 { "mediaDuration", n => { MediaDuration = n.GetTimeSpanValue(); } },
                 { "networkLinkSpeedInBytes", n => { NetworkLinkSpeedInBytes = n.GetLongValue(); } },
@@ -248,20 +288,20 @@ namespace Microsoft.Graph.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteTimeSpanValue("averageInboundJitter", AverageInboundJitter);
-            writer.WriteDoubleValue("averageInboundPacketLossRateInPercentage", AverageInboundPacketLossRateInPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage>("averageInboundPacketLossRateInPercentage", AverageInboundPacketLossRateInPercentage);
             writer.WriteTimeSpanValue("averageInboundRoundTripDelay", AverageInboundRoundTripDelay);
             writer.WriteTimeSpanValue("averageOutboundJitter", AverageOutboundJitter);
-            writer.WriteDoubleValue("averageOutboundPacketLossRateInPercentage", AverageOutboundPacketLossRateInPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage>("averageOutboundPacketLossRateInPercentage", AverageOutboundPacketLossRateInPercentage);
             writer.WriteTimeSpanValue("averageOutboundRoundTripDelay", AverageOutboundRoundTripDelay);
             writer.WriteIntValue("channelIndex", ChannelIndex);
             writer.WriteLongValue("inboundPackets", InboundPackets);
             writer.WriteStringValue("localIPAddress", LocalIPAddress);
             writer.WriteIntValue("localPort", LocalPort);
             writer.WriteTimeSpanValue("maximumInboundJitter", MaximumInboundJitter);
-            writer.WriteDoubleValue("maximumInboundPacketLossRateInPercentage", MaximumInboundPacketLossRateInPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage>("maximumInboundPacketLossRateInPercentage", MaximumInboundPacketLossRateInPercentage);
             writer.WriteTimeSpanValue("maximumInboundRoundTripDelay", MaximumInboundRoundTripDelay);
             writer.WriteTimeSpanValue("maximumOutboundJitter", MaximumOutboundJitter);
-            writer.WriteDoubleValue("maximumOutboundPacketLossRateInPercentage", MaximumOutboundPacketLossRateInPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage>("maximumOutboundPacketLossRateInPercentage", MaximumOutboundPacketLossRateInPercentage);
             writer.WriteTimeSpanValue("maximumOutboundRoundTripDelay", MaximumOutboundRoundTripDelay);
             writer.WriteTimeSpanValue("mediaDuration", MediaDuration);
             writer.WriteLongValue("networkLinkSpeedInBytes", NetworkLinkSpeedInBytes);
@@ -270,6 +310,390 @@ namespace Microsoft.Graph.Models
             writer.WriteStringValue("remoteIPAddress", RemoteIPAddress);
             writer.WriteIntValue("remotePort", RemotePort);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage"/> and sets the default values.
+            /// </summary>
+            public TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.TeleconferenceDeviceMediaQuality.TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

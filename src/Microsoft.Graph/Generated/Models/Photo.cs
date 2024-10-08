@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class Photo : IAdditionalDataHolder, IBackedModel, IParsable
     #pragma warning restore CS1591
@@ -54,29 +54,69 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>The denominator for the exposure time fraction from the camera. Read-only.</summary>
-        public double? ExposureDenominator
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator? ExposureDenominator
         {
-            get { return BackingStore?.Get<double?>("exposureDenominator"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator?>("exposureDenominator"); }
             set { BackingStore?.Set("exposureDenominator", value); }
         }
-        /// <summary>The numerator for the exposure time fraction from the camera. Read-only.</summary>
-        public double? ExposureNumerator
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator ExposureDenominator
         {
-            get { return BackingStore?.Get<double?>("exposureNumerator"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator>("exposureDenominator"); }
+            set { BackingStore?.Set("exposureDenominator", value); }
+        }
+#endif
+        /// <summary>The numerator for the exposure time fraction from the camera. Read-only.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator? ExposureNumerator
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator?>("exposureNumerator"); }
             set { BackingStore?.Set("exposureNumerator", value); }
         }
-        /// <summary>The F-stop value from the camera. Read-only.</summary>
-        public double? FNumber
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator ExposureNumerator
         {
-            get { return BackingStore?.Get<double?>("fNumber"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator>("exposureNumerator"); }
+            set { BackingStore?.Set("exposureNumerator", value); }
+        }
+#endif
+        /// <summary>The F-stop value from the camera. Read-only.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.Photo.Photo_fNumber? FNumber
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_fNumber?>("fNumber"); }
             set { BackingStore?.Set("fNumber", value); }
         }
-        /// <summary>The focal length from the camera. Read-only.</summary>
-        public double? FocalLength
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.Photo.Photo_fNumber FNumber
         {
-            get { return BackingStore?.Get<double?>("focalLength"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_fNumber>("fNumber"); }
+            set { BackingStore?.Set("fNumber", value); }
+        }
+#endif
+        /// <summary>The focal length from the camera. Read-only.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.Photo.Photo_focalLength? FocalLength
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_focalLength?>("focalLength"); }
             set { BackingStore?.Set("focalLength", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.Photo.Photo_focalLength FocalLength
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Photo.Photo_focalLength>("focalLength"); }
+            set { BackingStore?.Set("focalLength", value); }
+        }
+#endif
         /// <summary>The ISO value from the camera. Read-only.</summary>
         public int? Iso
         {
@@ -139,10 +179,10 @@ namespace Microsoft.Graph.Models
             {
                 { "cameraMake", n => { CameraMake = n.GetStringValue(); } },
                 { "cameraModel", n => { CameraModel = n.GetStringValue(); } },
-                { "exposureDenominator", n => { ExposureDenominator = n.GetDoubleValue(); } },
-                { "exposureNumerator", n => { ExposureNumerator = n.GetDoubleValue(); } },
-                { "fNumber", n => { FNumber = n.GetDoubleValue(); } },
-                { "focalLength", n => { FocalLength = n.GetDoubleValue(); } },
+                { "exposureDenominator", n => { ExposureDenominator = n.GetObjectValue<global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator>(global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator.CreateFromDiscriminatorValue); } },
+                { "exposureNumerator", n => { ExposureNumerator = n.GetObjectValue<global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator>(global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator.CreateFromDiscriminatorValue); } },
+                { "fNumber", n => { FNumber = n.GetObjectValue<global::Microsoft.Graph.Models.Photo.Photo_fNumber>(global::Microsoft.Graph.Models.Photo.Photo_fNumber.CreateFromDiscriminatorValue); } },
+                { "focalLength", n => { FocalLength = n.GetObjectValue<global::Microsoft.Graph.Models.Photo.Photo_focalLength>(global::Microsoft.Graph.Models.Photo.Photo_focalLength.CreateFromDiscriminatorValue); } },
                 { "iso", n => { Iso = n.GetIntValue(); } },
                 { "@odata.type", n => { OdataType = n.GetStringValue(); } },
                 { "orientation", n => { Orientation = n.GetIntValue(); } },
@@ -158,15 +198,399 @@ namespace Microsoft.Graph.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cameraMake", CameraMake);
             writer.WriteStringValue("cameraModel", CameraModel);
-            writer.WriteDoubleValue("exposureDenominator", ExposureDenominator);
-            writer.WriteDoubleValue("exposureNumerator", ExposureNumerator);
-            writer.WriteDoubleValue("fNumber", FNumber);
-            writer.WriteDoubleValue("focalLength", FocalLength);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator>("exposureDenominator", ExposureDenominator);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator>("exposureNumerator", ExposureNumerator);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.Photo.Photo_fNumber>("fNumber", FNumber);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.Photo.Photo_focalLength>("focalLength", FocalLength);
             writer.WriteIntValue("iso", Iso);
             writer.WriteStringValue("@odata.type", OdataType);
             writer.WriteIntValue("orientation", Orientation);
             writer.WriteDateTimeOffsetValue("takenDateTime", TakenDateTime);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class Photo_exposureDenominator : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator"/> and sets the default values.
+            /// </summary>
+            public Photo_exposureDenominator()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.Photo.Photo_exposureDenominator();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class Photo_exposureNumerator : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator"/> and sets the default values.
+            /// </summary>
+            public Photo_exposureNumerator()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.Photo.Photo_exposureNumerator();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class Photo_fNumber : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.Photo.Photo_fNumber"/> and sets the default values.
+            /// </summary>
+            public Photo_fNumber()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.Photo.Photo_fNumber"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.Photo.Photo_fNumber CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.Photo.Photo_fNumber();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class Photo_focalLength : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.Photo.Photo_focalLength"/> and sets the default values.
+            /// </summary>
+            public Photo_focalLength()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.Photo.Photo_focalLength"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.Photo.Photo_focalLength CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.Photo.Photo_focalLength();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

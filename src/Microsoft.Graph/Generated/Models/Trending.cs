@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Microsoft.Graph.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     #pragma warning disable CS1591
     public partial class Trending : global::Microsoft.Graph.Models.Entity, IParsable
     #pragma warning restore CS1591
@@ -67,11 +67,21 @@ namespace Microsoft.Graph.Models
         }
 #endif
         /// <summary>Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.</summary>
-        public double? Weight
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.Trending.Trending_weight? Weight
         {
-            get { return BackingStore?.Get<double?>("weight"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Trending.Trending_weight?>("weight"); }
             set { BackingStore?.Set("weight", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.Trending.Trending_weight Weight
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.Trending.Trending_weight>("weight"); }
+            set { BackingStore?.Set("weight", value); }
+        }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -94,7 +104,7 @@ namespace Microsoft.Graph.Models
                 { "resource", n => { Resource = n.GetObjectValue<global::Microsoft.Graph.Models.Entity>(global::Microsoft.Graph.Models.Entity.CreateFromDiscriminatorValue); } },
                 { "resourceReference", n => { ResourceReference = n.GetObjectValue<global::Microsoft.Graph.Models.ResourceReference>(global::Microsoft.Graph.Models.ResourceReference.CreateFromDiscriminatorValue); } },
                 { "resourceVisualization", n => { ResourceVisualization = n.GetObjectValue<global::Microsoft.Graph.Models.ResourceVisualization>(global::Microsoft.Graph.Models.ResourceVisualization.CreateFromDiscriminatorValue); } },
-                { "weight", n => { Weight = n.GetDoubleValue(); } },
+                { "weight", n => { Weight = n.GetObjectValue<global::Microsoft.Graph.Models.Trending.Trending_weight>(global::Microsoft.Graph.Models.Trending.Trending_weight.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -107,7 +117,103 @@ namespace Microsoft.Graph.Models
             base.Serialize(writer);
             writer.WriteDateTimeOffsetValue("lastModifiedDateTime", LastModifiedDateTime);
             writer.WriteObjectValue<global::Microsoft.Graph.Models.Entity>("resource", Resource);
-            writer.WriteDoubleValue("weight", Weight);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.Trending.Trending_weight>("weight", Weight);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class Trending_weight : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.Trending.Trending_weight"/> and sets the default values.
+            /// </summary>
+            public Trending_weight()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.Trending.Trending_weight"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.Trending.Trending_weight CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.Trending.Trending_weight();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

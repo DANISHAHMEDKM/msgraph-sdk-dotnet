@@ -10,57 +10,137 @@ namespace Microsoft.Graph.Models
     /// <summary>
     /// The user experience analytics hardware readiness entity contains account level information about hardware blockers for windows upgrade.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric : global::Microsoft.Graph.Models.Entity, IParsable
     {
         /// <summary>The percentage of devices for which OS check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? OsCheckFailedPercentage
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage? OsCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("osCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage?>("osCheckFailedPercentage"); }
             set { BackingStore?.Set("osCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? Processor64BitCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage OsCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("processor64BitCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage>("osCheckFailedPercentage"); }
+            set { BackingStore?.Set("osCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage? Processor64BitCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage?>("processor64BitCheckFailedPercentage"); }
             set { BackingStore?.Set("processor64BitCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which processor hardware core count check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? ProcessorCoreCountCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage Processor64BitCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("processorCoreCountCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage>("processor64BitCheckFailedPercentage"); }
+            set { BackingStore?.Set("processor64BitCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which processor hardware core count check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage? ProcessorCoreCountCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage?>("processorCoreCountCheckFailedPercentage"); }
             set { BackingStore?.Set("processorCoreCountCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which processor hardware family check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? ProcessorFamilyCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage ProcessorCoreCountCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("processorFamilyCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage>("processorCoreCountCheckFailedPercentage"); }
+            set { BackingStore?.Set("processorCoreCountCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which processor hardware family check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage? ProcessorFamilyCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage?>("processorFamilyCheckFailedPercentage"); }
             set { BackingStore?.Set("processorFamilyCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which processor hardware speed check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? ProcessorSpeedCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage ProcessorFamilyCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("processorSpeedCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage>("processorFamilyCheckFailedPercentage"); }
+            set { BackingStore?.Set("processorFamilyCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which processor hardware speed check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage? ProcessorSpeedCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage?>("processorSpeedCheckFailedPercentage"); }
             set { BackingStore?.Set("processorSpeedCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which RAM hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? RamCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage ProcessorSpeedCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("ramCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage>("processorSpeedCheckFailedPercentage"); }
+            set { BackingStore?.Set("processorSpeedCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which RAM hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage? RamCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage?>("ramCheckFailedPercentage"); }
             set { BackingStore?.Set("ramCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which secure boot hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? SecureBootCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage RamCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("secureBootCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage>("ramCheckFailedPercentage"); }
+            set { BackingStore?.Set("ramCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which secure boot hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage? SecureBootCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage?>("secureBootCheckFailedPercentage"); }
             set { BackingStore?.Set("secureBootCheckFailedPercentage", value); }
         }
-        /// <summary>The percentage of devices for which storage hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? StorageCheckFailedPercentage
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage SecureBootCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("storageCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage>("secureBootCheckFailedPercentage"); }
+            set { BackingStore?.Set("secureBootCheckFailedPercentage", value); }
+        }
+#endif
+        /// <summary>The percentage of devices for which storage hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage? StorageCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage?>("storageCheckFailedPercentage"); }
             set { BackingStore?.Set("storageCheckFailedPercentage", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage StorageCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage>("storageCheckFailedPercentage"); }
+            set { BackingStore?.Set("storageCheckFailedPercentage", value); }
+        }
+#endif
         /// <summary>The count of total devices in an organization. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647</summary>
         public int? TotalDeviceCount
         {
@@ -68,11 +148,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("totalDeviceCount", value); }
         }
         /// <summary>The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? TpmCheckFailedPercentage
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage? TpmCheckFailedPercentage
         {
-            get { return BackingStore?.Get<double?>("tpmCheckFailedPercentage"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage?>("tpmCheckFailedPercentage"); }
             set { BackingStore?.Set("tpmCheckFailedPercentage", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage TpmCheckFailedPercentage
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage>("tpmCheckFailedPercentage"); }
+            set { BackingStore?.Set("tpmCheckFailedPercentage", value); }
+        }
+#endif
         /// <summary>The count of devices in an organization eligible for windows upgrade. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647</summary>
         public int? UpgradeEligibleDeviceCount
         {
@@ -97,16 +187,16 @@ namespace Microsoft.Graph.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "osCheckFailedPercentage", n => { OsCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "processor64BitCheckFailedPercentage", n => { Processor64BitCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "processorCoreCountCheckFailedPercentage", n => { ProcessorCoreCountCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "processorFamilyCheckFailedPercentage", n => { ProcessorFamilyCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "processorSpeedCheckFailedPercentage", n => { ProcessorSpeedCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "ramCheckFailedPercentage", n => { RamCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "secureBootCheckFailedPercentage", n => { SecureBootCheckFailedPercentage = n.GetDoubleValue(); } },
-                { "storageCheckFailedPercentage", n => { StorageCheckFailedPercentage = n.GetDoubleValue(); } },
+                { "osCheckFailedPercentage", n => { OsCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "processor64BitCheckFailedPercentage", n => { Processor64BitCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "processorCoreCountCheckFailedPercentage", n => { ProcessorCoreCountCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "processorFamilyCheckFailedPercentage", n => { ProcessorFamilyCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "processorSpeedCheckFailedPercentage", n => { ProcessorSpeedCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "ramCheckFailedPercentage", n => { RamCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "secureBootCheckFailedPercentage", n => { SecureBootCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage.CreateFromDiscriminatorValue); } },
+                { "storageCheckFailedPercentage", n => { StorageCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage.CreateFromDiscriminatorValue); } },
                 { "totalDeviceCount", n => { TotalDeviceCount = n.GetIntValue(); } },
-                { "tpmCheckFailedPercentage", n => { TpmCheckFailedPercentage = n.GetDoubleValue(); } },
+                { "tpmCheckFailedPercentage", n => { TpmCheckFailedPercentage = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage>(global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage.CreateFromDiscriminatorValue); } },
                 { "upgradeEligibleDeviceCount", n => { UpgradeEligibleDeviceCount = n.GetIntValue(); } },
             };
         }
@@ -118,17 +208,881 @@ namespace Microsoft.Graph.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteDoubleValue("osCheckFailedPercentage", OsCheckFailedPercentage);
-            writer.WriteDoubleValue("processor64BitCheckFailedPercentage", Processor64BitCheckFailedPercentage);
-            writer.WriteDoubleValue("processorCoreCountCheckFailedPercentage", ProcessorCoreCountCheckFailedPercentage);
-            writer.WriteDoubleValue("processorFamilyCheckFailedPercentage", ProcessorFamilyCheckFailedPercentage);
-            writer.WriteDoubleValue("processorSpeedCheckFailedPercentage", ProcessorSpeedCheckFailedPercentage);
-            writer.WriteDoubleValue("ramCheckFailedPercentage", RamCheckFailedPercentage);
-            writer.WriteDoubleValue("secureBootCheckFailedPercentage", SecureBootCheckFailedPercentage);
-            writer.WriteDoubleValue("storageCheckFailedPercentage", StorageCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage>("osCheckFailedPercentage", OsCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage>("processor64BitCheckFailedPercentage", Processor64BitCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage>("processorCoreCountCheckFailedPercentage", ProcessorCoreCountCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage>("processorFamilyCheckFailedPercentage", ProcessorFamilyCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage>("processorSpeedCheckFailedPercentage", ProcessorSpeedCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage>("ramCheckFailedPercentage", RamCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage>("secureBootCheckFailedPercentage", SecureBootCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage>("storageCheckFailedPercentage", StorageCheckFailedPercentage);
             writer.WriteIntValue("totalDeviceCount", TotalDeviceCount);
-            writer.WriteDoubleValue("tpmCheckFailedPercentage", TpmCheckFailedPercentage);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage>("tpmCheckFailedPercentage", TpmCheckFailedPercentage);
             writer.WriteIntValue("upgradeEligibleDeviceCount", UpgradeEligibleDeviceCount);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_osCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processor64BitCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorCoreCountCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorFamilyCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_processorSpeedCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_ramCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_secureBootCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_storageCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric_tpmCheckFailedPercentage();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Microsoft.Graph.Models
     /// <summary>
     /// The user experience analytics application performance entity contains application performance details.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.19.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
     public partial class UserExperienceAnalyticsAppHealthApplicationPerformance : global::Microsoft.Graph.Models.Entity, IParsable
     {
         /// <summary>The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647</summary>
@@ -48,11 +48,21 @@ namespace Microsoft.Graph.Models
             set { BackingStore?.Set("appHangCount", value); }
         }
         /// <summary>The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308</summary>
-        public double? AppHealthScore
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore? AppHealthScore
         {
-            get { return BackingStore?.Get<double?>("appHealthScore"); }
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore?>("appHealthScore"); }
             set { BackingStore?.Set("appHealthScore", value); }
         }
+#nullable restore
+#else
+        public global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore AppHealthScore
+        {
+            get { return BackingStore?.Get<global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore>("appHealthScore"); }
+            set { BackingStore?.Set("appHealthScore", value); }
+        }
+#endif
         /// <summary>The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +129,7 @@ namespace Microsoft.Graph.Models
                 { "appCrashCount", n => { AppCrashCount = n.GetIntValue(); } },
                 { "appDisplayName", n => { AppDisplayName = n.GetStringValue(); } },
                 { "appHangCount", n => { AppHangCount = n.GetIntValue(); } },
-                { "appHealthScore", n => { AppHealthScore = n.GetDoubleValue(); } },
+                { "appHealthScore", n => { AppHealthScore = n.GetObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore>(global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore.CreateFromDiscriminatorValue); } },
                 { "appName", n => { AppName = n.GetStringValue(); } },
                 { "appPublisher", n => { AppPublisher = n.GetStringValue(); } },
                 { "appUsageDuration", n => { AppUsageDuration = n.GetIntValue(); } },
@@ -138,11 +148,107 @@ namespace Microsoft.Graph.Models
             writer.WriteIntValue("appCrashCount", AppCrashCount);
             writer.WriteStringValue("appDisplayName", AppDisplayName);
             writer.WriteIntValue("appHangCount", AppHangCount);
-            writer.WriteDoubleValue("appHealthScore", AppHealthScore);
+            writer.WriteObjectValue<global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore>("appHealthScore", AppHealthScore);
             writer.WriteStringValue("appName", AppName);
             writer.WriteStringValue("appPublisher", AppPublisher);
             writer.WriteIntValue("appUsageDuration", AppUsageDuration);
             writer.WriteIntValue("meanTimeToFailureInMinutes", MeanTimeToFailureInMinutes);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.20.0")]
+        public partial class UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore : IBackedModel, IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Stores model information.</summary>
+            public IBackingStore BackingStore { get; private set; }
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double
+            {
+                get { return BackingStore?.Get<double?>("double"); }
+                set { BackingStore?.Set("double", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="global::Microsoft.Graph.Models.ReferenceNumeric"/></summary>
+            public global::Microsoft.Graph.Models.ReferenceNumeric? ReferenceNumeric
+            {
+                get { return BackingStore?.Get<global::Microsoft.Graph.Models.ReferenceNumeric?>("ReferenceNumeric"); }
+                set { BackingStore?.Set("ReferenceNumeric", value); }
+            }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String
+            {
+                get { return BackingStore?.Get<string?>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#nullable restore
+#else
+            public string String
+            {
+                get { return BackingStore?.Get<string>("string"); }
+                set { BackingStore?.Set("string", value); }
+            }
+#endif
+            /// <summary>
+            /// Instantiates a new <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore"/> and sets the default values.
+            /// </summary>
+            public UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore()
+            {
+                BackingStore = BackingStoreFactorySingleton.Instance.CreateBackingStore();
+            }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Microsoft.Graph.Models.UserExperienceAnalyticsAppHealthApplicationPerformance.UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore();
+                if(parseNode.GetEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>() is global::Microsoft.Graph.Models.ReferenceNumeric referenceNumericValue)
+                {
+                    result.ReferenceNumeric = referenceNumericValue;
+                }
+                else if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceNumeric != null)
+                {
+                    writer.WriteEnumValue<global::Microsoft.Graph.Models.ReferenceNumeric>(null, ReferenceNumeric);
+                }
+                else if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }
